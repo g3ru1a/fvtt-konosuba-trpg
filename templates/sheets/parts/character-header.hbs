@@ -1,0 +1,132 @@
+<div class="w-full h-4 mb-4 bar"></div>
+<div class="flex flex-row items-stretch justify-stretch">
+    <div class="w-3/5 flex flex-col items-stretch justify-start">
+        <div class="w-full h-24">
+            <img class="relative w-full -mt-8 h-48 border-none z-50" src="/systems/konosuba/assets/logo.svg" alt="tes" />
+        </div>
+        <p class="text-3xl m-0 font-semibold">{{ localize config.cs.title }}</p>
+        <div class="w-full h-4 mb-4 bar transform rotate-180"></div>
+        
+        <div class="pr-4">
+            <div class="mb-4 w-full border-t-3 border-l-3 border-b-3 border-solid border-theme">
+                <div class="flex flex-row items-end text-theme">
+                    <div class="w-2/3 flex flex-col">
+                        <p class="pl-1 text-lg font-bold bordered-text">{{ localize config.cs.character_name }}</p>
+                        <input class="big-input" type="text" name="name" value="{{actor.name}}">
+                    </div>
+                    <div class="w-1/3 flex flex-col items-end justify-end border-r-3 border-t-3 border-l-2 border-theme border-solid">
+                        <div class="pl-2 pb-2 w-full flex flex-row items-center">
+                            <p class="pr-2 text-sm font-semibold">{{ localize config.cs.age }}</p>
+                            <input type="number" name="data.details.age" value="{{data.details.age}}">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row items-evenly text-theme border-t-2 border-solid border-theme">
+                    <div class="w-2/3 flex flex-col">
+                        <p class="pl-1 text-lg font-bold">{{ localize config.cs.player_name }}</p>
+                        <input class="big-input" type="text" name="data.details.player_name" value="{{data.details.player_name}}">
+                    </div>
+                    <div class="w-1/3 flex flex-col items-evenly justify-evenly border-r-3 border-l-2 border-theme border-solid">
+                        <div class="pl-2 w-full flex flex-row items-center">
+                            <p class="pr-2 text-sm font-semibold">{{ localize config.cs.gender }}</p>
+                            <input type="text" name="data.details.gender" value="{{data.details.gender}}">
+                        </div>
+                        <div class="pl-2 w-full flex flex-row items-center border-t-2 border-solid border-theme">
+                            <p class="pr-2 text-sm font-semibold">{{ localize config.cs.xp }}</p>
+                            <input type="number" name="data.attributes.xp.value" value="{{data.attributes.xp.value}}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 w-full flex flex-row">
+                <div class="w-9/12 mr-4 border-3 border-solid border-theme">
+                    <div class="flex flex-row items-end text-theme">
+                        <div class="w-full flex flex-col">
+                            <p class="pl-1 text-lg font-bold">{{ localize config.cs.race }}</p>
+                            <input class="big-input" type="text">
+                        </div>
+                    </div>
+                    <div class="flex flex-row items-evenly text-theme border-t-2 border-solid border-theme">
+                        <div class="w-full flex flex-col">
+                            <p class="pl-1 text-lg font-bold">{{ localize config.cs.class }}</p>
+                            <input class="big-input" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-3/12 flex flex-col items-center border-3 border-solid border-theme">
+                    <p class="mx-2 py-2 text-sm font-semibold text-center text-theme border-b-2 border-solid border-theme">
+                        {{ localize config.cs.level }}
+                    </p>
+                    <input class="full-input level" type="number" name="data.attributes.level" value="{{data.attributes.level}}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-4 w-2/5 flex flex-col">
+        <div
+            class="w-full mb-4 flex flex-col items-stretch justify-start p-2 border-l-3 border-r-3 border-b-3 border-t-0 border-solid border-theme">
+            <img class="w-full h-6 mx-auto border-none" src="/systems/konosuba/assets/character_image_border.png" />
+            <div class="w-full h-52">
+                <img class="w-48 h-full mx-auto" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" />
+            </div>
+            <img class="w-full h-6 mx-auto border-none transform rotate-180"
+                src="/systems/konosuba/assets/character_image_border.png" />
+            <p class="mb-2 text-theme font-semibold">{{ localize config.cs.appearence }}</p>
+            <div
+                class="flex flex-row items-stretch justify-evenly border-t-2 border-theme border-solid text-theme font-semibold">
+                <div class="w-1/2 px-2 text-sm flex flex-row items-center justify-start border-r-2 border-theme border-solid">
+                    <label for="height" class="pr-2">{{ localize config.cs.height }}</label>
+                    <input type="text" name="data.details.height" value="{{data.details.height}}" class="w-full">
+                </div>
+                <div class="w-1/2 text-sm flex flex-row items-center justify-start text-center">
+                    <label for="hair" class="px-2">{{ localize config.cs.hair_color }}</label>
+                    <input type="text" name="data.details.hair_color" value="{{data.details.hair_color}}" class="w-full">
+                </div>
+            </div>
+            <div
+                class="flex flex-row items-stretch justify-evenly border-t-2 border-theme border-solid text-theme font-semibold">
+                <div class="w-1/2 px-2 text-sm flex flex-row items-center justify-start border-r-2 border-theme border-solid">
+                    <label for="eye" class="pr-2">{{ localize config.cs.eye_color }}</label>
+                    <input type="text" name="data.details.eye_color" value="{{data.details.eye_color}}" class="w-full">
+                </div>
+                <div class="w-1/2 text-sm flex flex-row items-center justify-start text-center">
+                    <label for="skin" class="px-2">{{ localize config.cs.skin_color }}</label>
+                    <input type="text" name="data.details.skin_color" value="{{data.details.skin_color}}" class="w-full">
+                </div>
+            </div>
+        </div>
+        <div class="w-full h-full flex flex-row items-center border-3 border-solid border-theme">
+            <div class="h-full w-4/12 flex flex-col items-center text-red-400">
+                <p class="m-0 mx-2 text-lg font-semibold text-center">
+                    {{ localize config.cs.hp }}
+                </p>
+                <div class="h-full flex flex-row items-center">
+                    <input class="full-input" type="number" name="data.attributes.hp.value" value="{{data.attributes.hp.value}}">
+                    <p class="text-xl">/</p>
+                    <input class="full-input" type="number" name="data.attributes.hp.max" value="{{data.attributes.hp.max}}">
+                </div>
+            </div>
+            <div class="h-full w-4/12 flex flex-col items-center text-blue-400 border-r-2 border-l-2 border-solid border-theme">
+                <p class="m-0 mx-2 text-lg font-semibold text-center">
+                    {{ localize config.cs.mp }}
+                </p>
+                <div class="h-full flex flex-row items-center">
+                    <input class="full-input" type="number" name="data.attributes.mp.value" value="{{data.attributes.mp.value}}">
+                    <p class="text-xl">/</p>
+                    <input class="full-input" type="number" name="data.attributes.mp.max" value="{{data.attributes.mp.max}}">
+                </div>
+            </div>
+            <div class="h-full w-4/12 flex flex-col items-center text-pink-400">
+                <p class="m-0 mx-2 text-lg font-semibold text-center">
+                    {{ localize config.cs.blessings }}
+                </p>
+                <div class="h-full flex flex-row items-center">
+                    <input class="full-input" type="number" name="data.attributes.blessings.value" value="{{data.attributes.blessings.value}}">
+                    <p class="text-xl">/</p>
+                    <input class="full-input" type="number" name="data.attributes.blessings.max" value="{{data.attributes.blessings.max}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

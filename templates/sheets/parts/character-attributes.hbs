@@ -1,0 +1,116 @@
+<div class="w-full flex flex-row items-stretch justify-stretch mt-2">
+    <div class="w-3/5 pl-1 pr-4 flex flex-row">
+        <div class="w-full">
+            <table class="theme table-fixed theme-abl capitalize text-center border-3 border-theme border-solid">
+
+                <head>
+                    <tr>
+                        <th class="p-1 w-2/12"></th>
+                        <th class="p-1 min-w-12">Base Ability Score</th>
+                        <th class="p-1 min-w-12">Ability Bonus</th>
+                        <th class="p-1 min-w-12">Class Mod</th>
+                        <th class="p-1 min-w-12">Skills</th>
+                        <th class="p-1 min-w-12">Ability Score</th>
+                        <th class="p-1 min-w-12">Skills</th>
+                        <th class="p-1 w-2/12">Check</th>
+                    </tr>
+                </head>
+
+                <body>
+                    {{#each data.abilities as |ability id|}}
+                    <tr>
+                        <td class="text-lg">{{id}}</td>
+                        <td class="h-12 text-lg p-1">
+                            <div
+                                class="h-full flex flex-row items-center justify-center border border-solid border-theme rounded-md">
+                                <p>10</p>
+                            </div>
+                        </td>
+                        <td class="h-12 text-lg ">
+                            <div>
+                                <p>10</p>
+                            </div>
+                        </td>
+                        <td class="h-12 text-lg ">
+                            <div>
+                                <p>10</p>
+                            </div>
+                        </td>
+                        <td class="h-12 text-lg ">
+                            <div>
+                                <p>10</p>
+                            </div>
+                        </td>
+                        <td class="h-12 text-lg p-1">
+                            <div
+                                class="h-full flex flex-row items-center justify-center border border-solid border-theme rounded-md">
+                                <p>10</p>
+                            </div>
+                        </td>
+                        <td class="h-12 text-lg ">
+                            <div>
+                                <p>10</p>
+                            </div>
+                        </td>
+                        <td class="h-12 text-lg p-1">
+                            <div
+                                class="h-full flex flex-row items-center justify-center border border-solid border-theme rounded-md">
+                                <p>10 <span class="text-sm">(2d6)</span></p>
+                            </div>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </body>
+            </table>
+        </div>
+    </div>
+    <div class="w-2/5 pr-1 flex flex-row">
+        <div class="w-full">
+            <table class="mb-4 theme theme-green table-fixed text-left border-3 border-theme border-solid">
+
+                <head>
+                    <tr>
+                        <th class="pl-4 text-2xl">Life Path</th>
+                        <th></th>
+                    </tr>
+                </head>
+
+                <body>
+                    <tr>
+                        <td class="pl-4">Origin</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="pl-4">Circumstance</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="pl-4">Goal</td>
+                        <td></td>
+                    </tr>
+                </body>
+            </table>
+
+            <table class="theme theme-purple table-fixed text-left border-3 border-theme border-solid">
+            
+                <head>
+                    <tr>
+                        <th class="pl-4 font-bold text-2xl">Cheat</th>
+                        <th></th>
+                    </tr>
+                </head>
+            
+                <body>
+                    <tr>
+                        <td class="pl-4">Name</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td class="pl-4">Effects</td>
+                        <td></td>
+                    </tr>
+                </body>
+            </table>
+        </div>
+    </div>
+</div>

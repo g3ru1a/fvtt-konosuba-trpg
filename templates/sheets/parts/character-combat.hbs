@@ -1,0 +1,44 @@
+<div class="w-full flex flex-row items-stretch justify-stretch mt-2">
+    <div class="w-full px-1 flex flex-row">
+        <div class="w-full">
+            <table class="theme table-fixed theme-equipment capitalize text-center border-3 border-theme border-solid">
+
+                <head>
+                    <tr>
+                        <th class="p-1 w-2/12">Combat</th>
+                        <th class="p-1 min-w-12">Check</th>
+                        <th class="p-1 min-w-12">Hit Mod</th>
+                        <th class="p-1 min-w-12">Attack Power</th>
+                        <th class="p-1 min-w-12">Dodge Mod</th>
+                        <th class="p-1 min-w-12">Physical Def</th>
+                        <th class="p-1 min-w-12">Magic Def</th>
+                        <th class="p-1 min-w-12">Action Mod</th>
+                        <th class="p-1 min-w-12">Move Mod</th>
+                        <th class="p-1 min-w-12">Skills</th>
+                        <th class="p-1 min-w-12">Other</th>
+                        <th class="p-1 w-2/12">Total</th>
+                    </tr>
+                </head>
+
+                <body>
+                    {{#each data.combat as |ability id|}}
+                        <tr>
+                            <th class="p-1">Combat</th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                            <th class="p-1"></th>
+                        </tr>
+                    {{/each}}
+                </body>
+            </table>
+        </div>
+    </div>
+</div>

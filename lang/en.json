@@ -1,0 +1,54 @@
+{
+    "konosuba": {
+        "character_sheet": {
+            "title": "Character Sheet",
+            "character_name": "Character Name",
+            "age": "Age",
+            "player_name": "Player Name",
+            "gender": "Gender",
+            "xp": "XP",
+            "race": "Race",
+            "class": "Class",
+            "level": "Character Level",
+            "appearence": "Character Appearence",
+            "height": "Height",
+            "hair_color": "Haird Color",
+            "eye_color": "Eye Color",
+            "skin_color": "Skin Color",
+            "hp": "HP",
+            "mp": "MP",
+            "blessings": "Blessings"
+        },
+        "tabs": {
+            "attributes": "Attributes",
+            "equipment": "Equipment",
+            "belongings": "Belongings",
+            "skills": "Skills",
+            "combat": "Combat"
+        },
+        "abilities": {
+            "str": "Strength",
+            "dex": "Dexterity",
+            "agl": "Agility",
+            "int": "Inteligence",
+            "per": "Perception",
+            "mnd": "Mind",
+            "lck": "Luck"
+        },
+        "attack": {
+            "guns": "Guns"
+        },
+        "character": {
+            "name": "Character Name",
+            "height": "Height",
+            "hair_color": "Hair",
+            "age": "Age",
+            "gender": "Gender",
+            "eye_color": "Eyes",
+            "skin_color": "Skin"
+        },
+        "player": {
+            "name": "Player Name"
+        }
+    }
+}

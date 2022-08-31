@@ -1,0 +1,38 @@
+<form class="{{cssClass}}" autocomplete="off">
+    {{> "systems/konosuba/templates/sheets/parts/character-header.hbs"}}
+
+    <nav class="sheet-navigation tabs text-lg" data-group="primary">
+        <a class="item active" data-tab="attributes">{{ localize config.tabs.attributes }}</a>
+        <a class="item" data-tab="combat">{{ localize config.tabs.combat }}</a>
+        <a class="item" data-tab="equipment">{{ localize config.tabs.equipment }}</a>
+        <a class="item" data-tab="belongings">{{ localize config.tabs.belongings }}</a>
+        <a class="item" data-tab="skills">{{ localize config.tabs.skills }}</a>
+    </nav>
+
+    <section class="sheet-body">
+        {{!-- Attributes Tab --}}
+        <div class="tab attributes flexcol" data-group="primary" data-tab="attributes">
+            {{> "systems/konosuba/templates/sheets/parts/character-attributes.hbs"}}
+        </div>
+
+        {{!-- Equipment Tab --}}
+        <div class="tab equipment flexcol" data-group="primary" data-tab="equipment">
+            {{> "systems/konosuba/templates/sheets/parts/character-equipment.hbs"}}
+        </div>
+
+        {{!-- Belongings Tab --}}
+        <div class="tab belongings flexcol" data-group="primary" data-tab="belongings">
+            {{> "systems/konosuba/templates/sheets/parts/character-belongings.hbs"}}
+        </div>
+
+        {{!-- Skills Tab --}}
+        <div class="tab skills flexcol" data-group="primary" data-tab="skills">
+            {{> "systems/konosuba/templates/sheets/parts/character-skills.hbs"}}
+        </div>
+
+        {{!-- Combat Tab --}}
+        <div class="tab combat flexcol" data-group="primary" data-tab="combat">
+            {{> "systems/konosuba/templates/sheets/parts/character-combat.hbs"}}
+        </div>
+    </section>
+</form>

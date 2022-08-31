@@ -1,0 +1,244 @@
+:root {
+    --header-color: #9E7933;
+    --header-color-second: #A16B1A;
+    --header-color-contrast: #4B3B40;
+    --theme-red: #EF0607;
+    --theme-orange: #FD8800;
+    --theme-green: #80B916;
+    --theme-blue: #0CB7FC;
+    --theme-dark-green: #01AE31;
+    --theme-purple: #4D2070;
+    --theme-pink: #EB3591;
+}
+
+@font-face {
+    font-family: "Simply Rounded";
+    src: url('/systems/konosuba/fonts/Simply Rounded.ttf');
+}
+@font-face {
+    font-family: "Simply Rounded";
+    src: url('/systems/konosuba/fonts/Simply Rounded Bold.ttf');
+    font-weight: bold;
+}
+/* @font-face {
+    font-family: "Simply Rounded";
+    src: url('/systems/konosuba/fonts/Simply Rounded Italic.ttf');
+    font-weight: italic;
+} */
+
+.character-sheet {
+    background-color: var(--header-color);
+    min-width: 861px;
+    min-height: 1200px;
+}
+
+.character-sheet .window-content {
+    font-family: "Simply Rounded";
+}
+
+.character-sheet .window-content input {
+    background: none;
+    border: none;
+    color: var(--header-color-contrast);
+    text-align: center;
+}
+
+.character-sheet .window-content {
+    background: none;
+    background-color: white;
+}
+
+.character-sheet .window-content input.big-input {
+    height: 3rem;
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.character-sheet .window-content input.full-input {
+    height: 100%;
+    padding-left: 0.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+    color: inherit;
+}
+
+.character-sheet .window-content input.full-input.level {
+    height: 100%;
+    padding-left: 0.5rem;
+    text-align: center;
+    font-size: 3rem;
+    color: #4B3B40;
+}
+
+.bar {
+    background-image: url('/systems/konosuba/assets/border_pattern.png');
+    background-size: 24px;
+    background-repeat: repeat-x;
+
+}
+
+.border-theme {
+    border-color: var(--header-color-second);
+}
+
+.text-theme {
+    color: var(--header-color-second);
+}
+
+.border-3 {
+    border-width: 3px;
+}
+
+.border-b-3 {
+    border-bottom-width: 3px;
+}
+
+.border-l-3 {
+    border-left-width: 3px;
+}
+
+.border-r-3 {
+    border-right-width: 3px;
+}
+
+.border-t-3 {
+    border-top-width: 3px;
+}
+
+.character-sheet nav.tabs {
+    border-top-width: 3px;
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-style: solid;
+    border-color: var(--header-color);
+    background-color: var(--header-color);
+}
+
+.character-sheet nav.tabs .item {
+    width: 100%;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    background-color: var(--header-color);
+    color: white;
+    border: none;
+}
+
+.character-sheet nav.tabs>a.item.active {
+    background-color: white !important;
+    color: var(--header-color-contrast);
+    text-shadow: none;
+}
+
+.character-sheet nav.tabs>a.item:hover {
+    background-color: var(--header-color-contrast);
+    text-shadow: none;
+}
+
+.character-sheet section.sheet-body {
+    border-width: 3px;
+    border-top-width: 0;
+    border-style: solid;
+    border-color: var(--header-color);
+}
+
+table.theme {
+    background: white;
+}
+
+table.theme tr:nth-child(even){
+    background-color: rgba(0, 0, 0, .1);
+}
+
+table.theme.theme-abl tr:nth-child(even) {
+    background-color: white;
+}
+
+table.theme th {
+    color: var(--header-color);
+}
+
+table.theme td {
+    color: var(--header-color-contrast);
+}
+
+table.theme tr,
+table.theme th {
+    border-style: solid;
+    border-bottom-width: 2px;
+    border-color: var(--header-color-second);
+}
+
+table.theme td,
+table.theme th {
+    border-style: solid;
+    border-left-width: 2px;
+    border-color: var(--header-color-second);
+}
+
+table.theme tr {
+    height: 2rem;
+}
+
+table.theme.theme-green,
+table.theme.theme-green th,
+table.theme.theme-green tr,
+table.theme.theme-green td {
+    color: var(--theme-green) !important;
+    border-color: var(--theme-green) !important;
+}
+
+table.theme.theme-purple,
+table.theme.theme-purple th,
+table.theme.theme-purple tr,
+table.theme.theme-purple td {
+    color: var(--theme-purple) !important;
+    border-color: var(--theme-purple) !important;
+}
+table.theme.theme-green th,
+table.theme.theme-green td,
+table.theme.theme-purple td,
+table.theme.theme-purple th {
+    border-left-width: 0;
+}
+
+table.theme.theme-abl tr:nth-child(2) > td,
+table.theme.theme-abl tr:nth-child(2) >td > div {
+    color: var(--theme-red) !important;
+    border-color: var(--theme-red) !important;
+}
+
+table.theme.theme-abl tr:nth-child(3)>td,
+table.theme.theme-abl tr:nth-child(3)>td>div {
+    color: var(--theme-orange) !important;
+    border-color: var(--theme-orange) !important;
+}
+
+table.theme.theme-abl tr:nth-child(4)>td,
+table.theme.theme-abl tr:nth-child(4)>td>div {
+    color: var(--theme-green) !important;
+    border-color: var(--theme-green) !important;
+}
+
+table.theme.theme-abl tr:nth-child(5)>td,
+table.theme.theme-abl tr:nth-child(5)>td>div {
+    color: var(--theme-blue) !important;
+    border-color: var(--theme-blue) !important;
+}
+
+table.theme.theme-abl tr:nth-child(6)>td,
+table.theme.theme-abl tr:nth-child(6)>td>div {
+    color: var(--theme-dark-green) !important;
+    border-color: var(--theme-dark-green) !important;
+}
+
+table.theme.theme-abl tr:nth-child(7)>td,
+table.theme.theme-abl tr:nth-child(7)>td>div {
+    color: var(--theme-purple) !important;
+    border-color: var(--theme-purple) !important;
+}
+
+table.theme.theme-abl tr:nth-child(8)>td,
+table.theme.theme-abl tr:nth-child(8)>td>div {
+    color: var(--theme-pink) !important;
+    border-color: var(--theme-pink) !important;
+}

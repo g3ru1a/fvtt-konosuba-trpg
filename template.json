@@ -1,0 +1,127 @@
+{
+	"Actor": {
+		"types": ["character", "npc"],
+		"templates": {
+			"common": {
+				"abilities": {
+					"str": {
+						"value": 0,
+						"class_modifier": 0,
+						"score": 0
+					},
+					"dex": {
+						"value": 0,
+						"class_modifier": 0,
+						"score": 0
+					},
+					"agi": {
+						"value": 0,
+						"class_modifier": 0,
+						"score": 0
+					},
+					"int": {
+						"value": 0,
+						"class_modifier": 0,
+						"score": 0
+					},
+					"per": {
+						"value": 0,
+						"class_modifier": 0,
+						"score": 0
+					},
+					"mnd": {
+						"value": 0,
+						"class_modifier": 0,
+						"score": 0
+					},
+					"luk": {
+						"value": 0,
+						"class_modifier": 0,
+						"score": 0
+					}
+				},
+				"eris": 0,
+				"attributes": {
+					"hp": {
+						"value": 0,
+						"max": 0
+					}
+				}
+			},
+			"combat_values": {
+				"check": 0,
+				"hm": 0,
+				"ap": 0,
+				"dm": 0,
+				"pd": 0,
+				"md": 0,
+				"am": 0,
+				"mm": 0,
+				"skills": 0,
+				"other": 0,
+				"total": {
+					"value": 0,
+					"dice": 2
+				}
+			},
+			"combat": {
+				"hit_check": {
+					"templates": ["combat_values"]
+				},
+				"attack_power": {
+					"templates": ["combat_values"]
+				}
+			}
+		},
+		"character": {
+			"templates": ["common", "combat"],
+			"attributes": {
+				"level": 1,
+				"xp": {
+					"value": 0,
+					"max": 100
+				},
+				"mp": {
+					"value": 0,
+					"max": 0
+				},
+				"blessings": {
+					"value": 0,
+					"max": 0
+				}
+			},
+			"details": {
+				"player_name": "Test",
+				"age": 0,
+				"gender": "",
+				"height": "",
+				"hair_color": "",
+				"eye_color": "",
+				"skin_color": ""
+			},
+			"life_path": {
+				"origin": "",
+				"circumstance": "",
+				"goal": ""
+			}
+		},
+		"npc": {
+			"templates": [
+				"common"
+			]
+		}
+	},
+	"Item": {
+		"types": ["race"],
+		"race": {
+			"desc": "Something about the race",
+			"str": 0,
+			"dex": 0,
+			"agi": 0,
+			"int": 0,
+			"per": 0,
+			"mnd": 0,
+			"luk": 0
+		}
+	}
+}
