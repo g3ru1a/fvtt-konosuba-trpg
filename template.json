@@ -112,16 +112,18 @@
 		}
 	},
 	"Item": {
-		"types": ["race"],
+		"types": ["race", "class", "equipment", "belonging", "extra"],
 		"race": {
 			"desc": "Something about the race",
-			"str": 0,
-			"dex": 0,
-			"agi": 0,
-			"int": 0,
-			"per": 0,
-			"mnd": 0,
-			"luk": 0
+			"attrs": {
+				"str": 0,
+				"dex": 0,
+				"agi": 0,
+				"int": 0,
+				"per": 0,
+				"mnd": 0,
+				"luk": 0
+			}
 		}
 	}
 }

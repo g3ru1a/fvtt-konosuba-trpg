@@ -42,15 +42,17 @@
             <div class="mb-4 w-full flex flex-row">
                 <div class="w-9/12 mr-4 border-3 border-solid border-theme">
                     <div class="flex flex-row items-end text-theme">
-                        <div class="w-full flex flex-col">
+                        <div class="item-box relative w-full flex flex-col">
                             <p class="pl-1 text-lg font-bold">{{ localize config.cs.race }}</p>
-                            <input class="big-input" type="text">
+                            <input class="item-edit cursor-pointer big-input" type="text" readonly value="{{race.name}}" data-item-id="{{race._id}}">
+                            {{#if race}}<i class="delete-icon absolute right-4 top-1/2 cursor-pointer fas fa-trash" data-item-id="{{race._id}}"></i>{{/if}}
                         </div>
                     </div>
                     <div class="flex flex-row items-evenly text-theme border-t-2 border-solid border-theme">
-                        <div class="w-full flex flex-col">
+                        <div class="item-box relative w-full flex flex-col">
                             <p class="pl-1 text-lg font-bold">{{ localize config.cs.class }}</p>
-                            <input class="big-input" type="text">
+                            <input class="item-edit cursor-pointer big-input" type="text" readonly value="{{class.name}}" data-item-id="{{class._id}}">
+                            {{#if class}}<i class="delete-icon absolute right-4 top-1/2 cursor-pointer fas fa-trash" data-item-id="{{class._id}}"></i>{{/if}}
                         </div>
                     </div>
                 </div>

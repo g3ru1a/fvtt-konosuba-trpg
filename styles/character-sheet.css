@@ -76,6 +76,18 @@
     background-repeat: repeat-x;
 
 }
+.character-sheet .window-content .item-box .delete-icon {
+    opacity: 0;
+}
+
+.character-sheet .window-content .item-box:hover .delete-icon {
+    opacity: 1;
+}
+
+.character-sheet .window-content input.item-edit:focus {
+    box-shadow: none;
+}
+
 
 .border-theme {
     border-color: var(--header-color-second);

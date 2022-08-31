@@ -1,0 +1,27 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="w-full h-full flex flex-col items-stretch justify-stretch">
+        <div class="mb-2 flex flex-row items-center justify-stretch">
+            <img class="mr-2" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="92" width="92" />
+            <div class="flex flex-row items-evenly justify-evenly">
+                {{#each data.attrs as |atribute id|}}
+                <div class="w-1o7 text-center">
+                    <label for="data.attrs.{{id}}">
+                        {{localize (ability id)}}
+                    </label>
+                    <input class="input big" type="number"
+                        name="data.attrs.{{id}}"
+                        value="{{atribute}}">
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="w-full">
+            <input class="input" style="height: 2.5rem;font-size: 24px" type="text" name="name" value="{{item.name}}"
+                placeholder="Name">
+        </div>
+        <div class="w-full editor-box">
+            {{editor target="data.desc" content=data.desc button=true owner=owner editable=editable}}
+        </div>
+    </div>
+</form>

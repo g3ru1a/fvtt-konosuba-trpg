@@ -1,5 +1,9 @@
 {
     "konosuba": {
+        "sheets": {
+            "player": "Konosuba Player Sheet",
+            "race": "Konosuba Race Sheet"
+        },
         "character_sheet": {
             "title": "Character Sheet",
             "character_name": "Character Name",
@@ -29,26 +33,11 @@
         "abilities": {
             "str": "Strength",
             "dex": "Dexterity",
-            "agl": "Agility",
+            "agi": "Agility",
             "int": "Inteligence",
             "per": "Perception",
             "mnd": "Mind",
-            "lck": "Luck"
-        },
-        "attack": {
-            "guns": "Guns"
-        },
-        "character": {
-            "name": "Character Name",
-            "height": "Height",
-            "hair_color": "Hair",
-            "age": "Age",
-            "gender": "Gender",
-            "eye_color": "Eyes",
-            "skin_color": "Skin"
-        },
-        "player": {
-            "name": "Player Name"
+            "luk": "Luck"
         }
     }
 }

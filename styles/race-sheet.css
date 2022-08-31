@@ -1,0 +1,58 @@
+.race-sheet {
+    min-width: 720px;
+    min-height: 320px;
+    background-color: var(--theme-red);
+}
+
+.race-sheet form {
+    display: flex;
+    flex-direction: column;
+    color: var(--header-color-contrast);
+}
+
+.race-sheet .editor-box {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.race-sheet .editor-box .editor {
+    height: 100%;
+    width: 100%;
+}
+
+.race-sheet .editor-box .editor div.tox.tox-tinymce {
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.race-sheet .window-content .input {
+    background: none;
+    border: none;
+    height: 100%;
+}
+
+.race-sheet .window-content .input:hover{
+    background: rgba(0, 0, 0, .05);
+}
+
+.race-sheet .window-content .input:focus {
+    background: rgba(0, 0, 0, .1);
+    border-style: solid;
+    border-color: var(--header-color);
+    border-bottom-width: 4px;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    box-sizing: border-box;
+}
+
+.race-sheet .window-content .input.big {
+    font-weight: bold;
+    font-size: 20px;
+}
+.w-1o7 {
+    width: 14.29%;
+}

@@ -1,7 +1,6 @@
-import KonosubaItemSheet from "./module/sheets/KonosubaItemSheet.js";
 import { konosuba } from "./module/config.js";
-import KonosubaCharacterSheet from "./module/sheets/KonosubaCharacterSheet.js";
-
+import RaceSheet from "./module/sheets/Items/RaceSheet.js";
+import CharacterSheet from "./module/sheets/Actors/CharacterSheet.js";
 
 async function loadHandleBarTemplates() {
     // register templates parts
@@ -16,16 +15,29 @@ async function loadHandleBarTemplates() {
     return loadTemplates(templatePaths);
 }
 
-Hooks.once("init", function() {
-    console.log('Konosuba | Initializing...');
+Hooks.once("init", function () {
+    console.log("Konosuba | Initializing...");
 
     loadHandleBarTemplates();
 
     CONFIG.konosuba = konosuba;
 
     Items.unregisterSheet("core", ItemSheet);
-    Items.registerSheet("konosuba", KonosubaItemSheet, {makeDefault: true});
+    Items.registerSheet("konosuba", RaceSheet, {
+        types: ["race"],
+        makeDefault: true,
+        label: "konosuba.sheets.race",
+    });
 
     Actors.unregisterSheet("core", ActorSheet);
-    Actors.registerSheet("konosuba", KonosubaCharacterSheet, { makeDefault: true });
+    Actors.registerSheet("konosuba", CharacterSheet, {
+        types: ["character"],
+        makeDefault: true,
+        label: "konosuba.sheets.race",
+    });
+
+    Handlebars.registerHelper("ability", function (abilityString) {
+        abilityString = abilityString.toLowerCase();
+        return "konosuba.abilities."+abilityString;
+    });
 });

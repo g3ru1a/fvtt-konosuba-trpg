@@ -1,9 +1,5 @@
 export const konosuba = {};
 
-konosuba.attackTypes = {
-    guns: "konosuba.attack.guns"
-}
-
 konosuba.cs = {
     title: "konosuba.character_sheet.title",
     character_name: "konosuba.character_sheet.character_name",
@@ -49,9 +45,9 @@ konosuba.tabs = {
 konosuba.abilities = {
     str: "konosuba.abilities.str",
     dex: "konosuba.abilities.dex",
-    agl: "konosuba.abilities.agl",
+    agi: "konosuba.abilities.agi",
     int: "konosuba.abilities.int",
     per: "konosuba.abilities.per",
     mnd: "konosuba.abilities.mnd",
-    lck: "konosuba.abilities.lck",
+    luk: "konosuba.abilities.luk",
 };
