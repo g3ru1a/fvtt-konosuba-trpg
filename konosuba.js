@@ -1,6 +1,8 @@
 import { konosuba } from "./module/config.js";
 import RaceSheet from "./module/sheets/Items/RaceSheet.js";
+import ClassSheet from "./module/sheets/Items/ClassSheet.js";
 import CharacterSheet from "./module/sheets/Actors/CharacterSheet.js";
+import registerHelpers from "./module/hbsHelpers.js";
 
 async function loadHandleBarTemplates() {
     // register templates parts
@@ -28,16 +30,18 @@ Hooks.once("init", function () {
         makeDefault: true,
         label: "konosuba.sheets.race",
     });
+    Items.registerSheet("konosuba", ClassSheet, {
+        types: ["class"],
+        makeDefault: true,
+        label: "konosuba.sheets.class",
+    });
 
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("konosuba", CharacterSheet, {
         types: ["character"],
         makeDefault: true,
-        label: "konosuba.sheets.race",
+        label: "konosuba.sheets.character",
     });
 
-    Handlebars.registerHelper("ability", function (abilityString) {
-        abilityString = abilityString.toLowerCase();
-        return "konosuba.abilities."+abilityString;
-    });
+    registerHelpers();
 });

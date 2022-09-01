@@ -11,7 +11,8 @@
 		"styles/konosuba.css",
 		"styles/tailwind.min.css",
 		"styles/character-sheet.css",
-		"styles/race-sheet.css"
+		"styles/race-sheet.css",
+		"styles/class-sheet.css"
 	],
 	"packs": [],
 	"languages": [

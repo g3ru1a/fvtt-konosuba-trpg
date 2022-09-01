@@ -1,8 +1,9 @@
 {
     "konosuba": {
         "sheets": {
-            "player": "Konosuba Player Sheet",
-            "race": "Konosuba Race Sheet"
+            "character": "Konosuba Character Sheet",
+            "race": "Konosuba Race Sheet",
+            "class": "Konosuba Class Sheet"
         },
         "character_sheet": {
             "title": "Character Sheet",
@@ -38,6 +39,13 @@
             "per": "Perception",
             "mnd": "Mind",
             "luk": "Luck"
+        },
+        "class_sheet": {
+            "starting_hp": "Starting HP",
+            "starting_mp": "Starting MP",
+            "hp_gain": "HP Gain",
+            "mp_gain": "MP Gain",
+            "equipment_requirement": "Equipment Requirement"
         }
     }
 }

@@ -51,8 +51,8 @@
                     <div class="flex flex-row items-evenly text-theme border-t-2 border-solid border-theme">
                         <div class="item-box relative w-full flex flex-col">
                             <p class="pl-1 text-lg font-bold">{{ localize config.cs.class }}</p>
-                            <input class="item-edit cursor-pointer big-input" type="text" readonly value="{{class.name}}" data-item-id="{{class._id}}">
-                            {{#if class}}<i class="delete-icon absolute right-4 top-1/2 cursor-pointer fas fa-trash" data-item-id="{{class._id}}"></i>{{/if}}
+                            <input class="item-edit cursor-pointer big-input" type="text" readonly value="{{currentClass.name}}" data-item-id="{{currentClass._id}}">
+                            {{#if currentClass}}<i class="delete-icon absolute right-4 top-1/2 cursor-pointer fas fa-trash" data-item-id="{{currentClass._id}}"></i>{{/if}}
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
                 <div class="h-full flex flex-row items-center">
                     <input class="full-input" type="number" name="data.attributes.hp.value" value="{{data.attributes.hp.value}}">
                     <p class="text-xl">/</p>
-                    <input class="full-input" type="number" name="data.attributes.hp.max" value="{{data.attributes.hp.max}}">
+                    <input class="full-input" type="number" name="data.attributes.hp.max" disabled value="{{data.attributes.hp.max}}">
                 </div>
             </div>
             <div class="h-full w-4/12 flex flex-col items-center text-blue-400 border-r-2 border-l-2 border-solid border-theme">
@@ -116,7 +116,7 @@
                 <div class="h-full flex flex-row items-center">
                     <input class="full-input" type="number" name="data.attributes.mp.value" value="{{data.attributes.mp.value}}">
                     <p class="text-xl">/</p>
-                    <input class="full-input" type="number" name="data.attributes.mp.max" value="{{data.attributes.mp.max}}">
+                    <input class="full-input" type="number" name="data.attributes.mp.max" disabled value="{{data.attributes.mp.max}}">
                 </div>
             </div>
             <div class="h-full w-4/12 flex flex-col items-center text-pink-400">

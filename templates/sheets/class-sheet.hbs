@@ -1,0 +1,45 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <div class="w-full h-full flex flex-col items-stretch justify-stretch">
+        <div class="mb-2 flex flex-row items-center justify-stretch">
+            <img class="mr-2" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="92" width="92" />
+            <div class="flex flex-row items-evenly justify-evenly">
+                {{#each data.mods as |mod id|}}
+                <div class="w-1o7 text-center">
+                    <label for="data.attrs.{{id}}">
+                        {{localize (ability id)}}
+                    </label>
+                    <input class="input big" type="number" name="data.mods.{{id}}" value="{{mod}}">
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div class="w-full flex flex-row items-evenly justify-evenly">
+            <input class="input" style="height: 2.5rem;font-size: 24px" type="text" name="name" value="{{item.name}}"
+                placeholder="Name">
+            <input class="input" style="height: 2.5rem;font-size: 18px" type="text" name="data.equipment_requirement"
+                value="{{data.equipment_requirement}}" placeholder="{{localize config.class_sheet.equipment_requirement}}">
+        </div>
+        <div class="my-2 w-full flex flex-row items-stretch justify-stretch text-center">
+            <div class="flex flex-row items-center justify-stretch">
+                <label class="mx-2" for="data.starting_hp">{{localize config.class_sheet.starting_hp}}</label>
+                <input class="input big" type="number" name="data.starting_hp" value="{{data.starting_hp}}">
+            </div>
+            <div class="flex flex-row items-center justify-stretch">
+                <label class="mx-2" for="data.starting_mp">{{localize config.class_sheet.starting_mp}}</label>
+                <input class="input big" type="number" name="data.starting_mp" value="{{data.starting_mp}}">
+            </div>
+            <div class="flex flex-row items-center justify-stretch">
+                <label class="mx-2" for="data.hp_gain">{{localize config.class_sheet.hp_gain}}</label>
+                <input class="input big" type="number" name="data.hp_gain" value="{{data.hp_gain}}">
+            </div>
+            <div class="flex flex-row items-center justify-stretch">
+                <label class="mx-2" for="data.mp_gain">{{localize config.class_sheet.mp_gain}}</label>
+                <input class="input big" type="number" name="data.mp_gain" value="{{data.mp_gain}}">
+            </div>
+        </div>
+        <div class="w-full editor-box">
+            {{editor target="data.desc" content=data.desc button=true owner=owner editable=editable}}
+        </div>
+    </div>
+</form>

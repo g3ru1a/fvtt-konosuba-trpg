@@ -5,39 +5,32 @@
 			"common": {
 				"abilities": {
 					"str": {
-						"value": 0,
-						"class_modifier": 0,
-						"score": 0
+						"bonus": 0,
+						"old_class_mod": 0
 					},
 					"dex": {
-						"value": 0,
-						"class_modifier": 0,
-						"score": 0
+						"bonus": 0,
+						"old_class_mod": 0
 					},
 					"agi": {
-						"value": 0,
-						"class_modifier": 0,
-						"score": 0
+						"bonus": 0,
+						"old_class_mod": 0
 					},
 					"int": {
-						"value": 0,
-						"class_modifier": 0,
-						"score": 0
+						"bonus": 0,
+						"old_class_mod": 0
 					},
 					"per": {
-						"value": 0,
-						"class_modifier": 0,
-						"score": 0
+						"bonus": 0,
+						"old_class_mod": 0
 					},
 					"mnd": {
-						"value": 0,
-						"class_modifier": 0,
-						"score": 0
+						"bonus": 0,
+						"old_class_mod": 0
 					},
 					"luk": {
-						"value": 0,
-						"class_modifier": 0,
-						"score": 0
+						"bonus": 0,
+						"old_class_mod": 0
 					}
 				},
 				"eris": 0,
@@ -47,47 +40,29 @@
 						"max": 0
 					}
 				}
-			},
-			"combat_values": {
-				"check": 0,
-				"hm": 0,
-				"ap": 0,
-				"dm": 0,
-				"pd": 0,
-				"md": 0,
-				"am": 0,
-				"mm": 0,
-				"skills": 0,
-				"other": 0,
-				"total": {
-					"value": 0,
-					"dice": 2
-				}
-			},
-			"combat": {
-				"hit_check": {
-					"templates": ["combat_values"]
-				},
-				"attack_power": {
-					"templates": ["combat_values"]
-				}
 			}
 		},
 		"character": {
-			"templates": ["common", "combat"],
+			"templates": ["common"],
 			"attributes": {
 				"level": 1,
+				"hp": {
+					"starting": 0,
+					"value": 0,
+					"max": 0
+				},
 				"xp": {
 					"value": 0,
 					"max": 100
 				},
 				"mp": {
+					"starting": 0,
 					"value": 0,
 					"max": 0
 				},
 				"blessings": {
-					"value": 0,
-					"max": 0
+					"value": 5,
+					"max": 5
 				}
 			},
 			"details": {
@@ -124,6 +99,24 @@
 				"mnd": 0,
 				"luk": 0
 			}
+		},
+		"class": {
+			"desc": "Something about the class",
+			"mods": {
+				"str": 0,
+				"dex": 0,
+				"agi": 0,
+				"int": 0,
+				"per": 0,
+				"mnd": 0,
+				"luk": 0
+			},
+			"starting_hp": 0,
+			"starting_mp": 0,
+			"hp_gain": 0,
+			"mp_gain": 0,
+			"equipment_requirement": "",
+			"isStartingClass": false
 		}
 	}
 }

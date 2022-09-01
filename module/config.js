@@ -51,3 +51,11 @@ konosuba.abilities = {
     mnd: "konosuba.abilities.mnd",
     luk: "konosuba.abilities.luk",
 };
+
+konosuba.class_sheet = {
+    starting_hp: "konosuba.class_sheet.starting_hp",
+    starting_mp: "konosuba.class_sheet.starting_mp",
+    hp_gain: "konosuba.class_sheet.hp_gain",
+    mp_gain: "konosuba.class_sheet.mp_gain",
+    equipment_requirement: "konosuba.class_sheet.equipment_requirement",
+};
